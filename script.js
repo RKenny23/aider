@@ -4,6 +4,8 @@ const questionElement = document.getElementById('question');
 const choicesElement = document.getElementById('choices');
 const scoreContainer = document.getElementById('scoreContainer');
 const finalScoreElement = document.getElementById('finalScore');
+const highScoreElement = document.getElementById('highScore');
+const gameOverElement = document.getElementById('gameOver');
 const restartButton = document.getElementById('restartButton');
 const scoreElement = document.getElementById('currentScore');
 
@@ -79,18 +81,27 @@ function enableButtons() {
 
 function endGame() {
   questionContainer.style.display = 'none';
+  gameOverElement.style.display = 'block';
   finalScoreElement.style.display = 'block';
   finalScoreElement.innerText = `Score: ${score}`;
+  if (score > highScore) {
+    highScore = score;
+    highScoreElement.innerText = 'New Highscore!';
+  } else {
+    highScoreElement.innerText = '';
+  }
+  highScoreElement.style.display = 'block';
   restartButton.style.display = 'block';
 }
 
 function restartGame() {
   questionContainer.style.display = 'none';
+  gameOverElement.style.display = 'none';
   finalScoreElement.style.display = 'none';
+  highScoreElement.style.display = 'none';
   restartButton.style.display = 'none';
   scoreContainer.style.display = 'none';
   startButton.style.display = 'block';
-  highScore = 0;
 }
 
 const questions = [

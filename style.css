@@ -50,12 +50,23 @@ button {
   color: white;
 }
 
-#finalScore {
+#gameOver {
+  display: none;
   margin-top: 50px;
 }
 
-#restartButton {
+#finalScore {
+  display: none;
   margin-top: 20px;
-  display: block;
+}
+
+#highScore {
+  display: none;
+  margin-top: 20px;
+}
+
+#restartButton {
+  display: none;
+  margin-top: 20px;
   margin: 0 auto;
 }
