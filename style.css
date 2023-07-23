@@ -22,12 +22,14 @@ button {
 }
 
 #choices {
+  display: flex;
+  justify-content: center;
   list-style-type: none;
   padding: 0;
 }
 
-#choices li {
-  margin-bottom: 10px;
+#choices button {
+  margin: 0 10px;
 }
 
 #nextButton {
@@ -38,4 +40,14 @@ button {
 
 #scoreContainer {
   margin-top: 50px;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.incorrect {
+  background-color: red;
+  color: white;
 }

@@ -32,23 +32,41 @@ function setNextQuestion() {
 function showQuestion(question) {
   questionElement.innerText = question.question;
   question.choices.forEach(choice => {
-    const li = document.createElement('li');
-    li.innerText = choice;
-    li.addEventListener('click', () => {
+    const button = document.createElement('button');
+    button.innerText = choice;
+    button.addEventListener('click', () => {
       if (choice === question.answer) {
         score++;
         scoreElement.innerText = score;
+        button.classList.add('correct');
+      } else {
+        button.classList.add('incorrect');
       }
-      li.classList.add(choice === question.answer ? 'correct' : 'incorrect');
-      li.removeEventListener('click', () => {});
+      disableButtons();
     });
-    choicesElement.appendChild(li);
+    choicesElement.appendChild(button);
   });
 }
 
 function resetState() {
   while (choicesElement.firstChild) {
     choicesElement.removeChild(choicesElement.firstChild);
+  }
+  enableButtons();
+}
+
+function disableButtons() {
+  const buttons = choicesElement.getElementsByTagName('button');
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = true;
+  }
+}
+
+function enableButtons() {
+  const buttons = choicesElement.getElementsByTagName('button');
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = false;
+    buttons[i].classList.remove('correct', 'incorrect');
   }
 }
 
