@@ -21,6 +21,7 @@ function startGame() {
   questionContainer.style.display = 'block';
   scoreContainer.style.display = 'block';
   score = 0;
+  scoreElement.innerText = score;
   currentQuestionIndex = 0;
   setNextQuestion();
 }
