@@ -7,6 +7,7 @@ const gameOverElement = document.getElementById('gameOver');
 const totalScoreElement = document.getElementById('totalScore');
 const finalScoreElement = document.getElementById('finalScore');
 const restartButton = document.getElementById('restartButton');
+const scoreElement = document.getElementById('currentScore');
 
 let currentQuestionIndex = 0;
 let score = 0;
