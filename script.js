@@ -3,14 +3,14 @@ const questionContainer = document.getElementById('questionContainer');
 const questionElement = document.getElementById('question');
 const choicesElement = document.getElementById('choices');
 const scoreContainer = document.getElementById('scoreContainer');
-const gameOverElement = document.getElementById('gameOver');
-const totalScoreElement = document.getElementById('totalScore');
+const highScoreElement = document.getElementById('highScore');
 const finalScoreElement = document.getElementById('finalScore');
 const restartButton = document.getElementById('restartButton');
 const scoreElement = document.getElementById('currentScore');
 
 let currentQuestionIndex = 0;
 let score = 0;
+let highScore = 0;
 
 startButton.addEventListener('click', startGame);
 restartButton.addEventListener('click', startGame);
@@ -80,16 +80,18 @@ function enableButtons() {
 
 function endGame() {
   questionContainer.style.display = 'none';
-  gameOverElement.style.display = 'block';
-  totalScoreElement.style.display = 'block';
+  highScoreElement.style.display = 'block';
   finalScoreElement.innerText = score;
+  if (score > highScore) {
+    highScore = score;
+    finalScoreElement.innerText = highScore;
+  }
   restartButton.style.display = 'block';
 }
 
 function restartGame() {
   questionContainer.style.display = 'none';
-  gameOverElement.style.display = 'none';
-  totalScoreElement.style.display = 'none';
+  highScoreElement.style.display = 'none';
   restartButton.style.display = 'none';
   scoreContainer.style.display = 'none';
   startButton.style.display = 'block';

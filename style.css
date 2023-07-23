@@ -50,12 +50,8 @@ button {
   color: white;
 }
 
-#gameOver {
+#highScore {
   margin-top: 50px;
-}
-
-#totalScore {
-  margin-top: 20px;
 }
 
 #restartButton {
