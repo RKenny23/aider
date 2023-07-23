@@ -32,12 +32,6 @@ button {
   margin: 0 10px;
 }
 
-#nextButton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-}
-
 #scoreContainer {
   margin-top: 50px;
 }
@@ -50,4 +44,12 @@ button {
 .incorrect {
   background-color: red;
   color: white;
+}
+
+#gameOver {
+  margin-top: 50px;
+}
+
+#totalScore {
+  margin-top: 20px;
 }
