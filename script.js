@@ -3,18 +3,20 @@ const questionContainer = document.getElementById('questionContainer');
 const questionElement = document.getElementById('question');
 const choicesElement = document.getElementById('choices');
 const scoreContainer = document.getElementById('scoreContainer');
-const scoreElement = document.getElementById('score');
 const gameOverElement = document.getElementById('gameOver');
 const totalScoreElement = document.getElementById('totalScore');
 const finalScoreElement = document.getElementById('finalScore');
+const restartButton = document.getElementById('restartButton');
 
 let currentQuestionIndex = 0;
 let score = 0;
 
 startButton.addEventListener('click', startGame);
+restartButton.addEventListener('click', startGame);
 
 function startGame() {
   startButton.style.display = 'none';
+  restartButton.style.display = 'none';
   questionContainer.style.display = 'block';
   scoreContainer.style.display = 'block';
   score = 0;
@@ -79,6 +81,7 @@ function endGame() {
   gameOverElement.style.display = 'block';
   totalScoreElement.style.display = 'block';
   finalScoreElement.innerText = score;
+  restartButton.style.display = 'block';
 }
 
 const questions = [
