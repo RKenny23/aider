@@ -38,7 +38,7 @@ function setNextQuestion() {
 
 function showQuestion(question) {
   questionElement.innerText = question.question;
-  question.choices.forEach(choice => {
+  question.choices.forEach((choice) => {
     const button = document.createElement('button');
     button.innerText = choice;
     button.addEventListener('click', () => {
@@ -99,62 +99,87 @@ const questions = [
   {
     question: 'What is the capital of France?',
     choices: ['Paris', 'London', 'Berlin', 'Madrid'],
-    answer: 'Paris'
+    answer: 'Paris',
   },
   {
     question: 'What is the largest planet in our solar system?',
     choices: ['Jupiter', 'Saturn', 'Mars', 'Earth'],
-    answer: 'Jupiter'
+    answer: 'Jupiter',
   },
   {
     question: 'Who painted the Mona Lisa?',
-    choices: ['Leonardo da Vinci', 'Pablo Picasso', 'Vincent van Gogh', 'Michelangelo'],
-    answer: 'Leonardo da Vinci'
+    choices: [
+      'Leonardo da Vinci',
+      'Pablo Picasso',
+      'Vincent van Gogh',
+      'Michelangelo',
+    ],
+    answer: 'Leonardo da Vinci',
   },
   // Add 10 more questions here
   {
     question: 'What is the capital of Japan?',
     choices: ['Tokyo', 'Beijing', 'Seoul', 'Bangkok'],
-    answer: 'Tokyo'
+    answer: 'Tokyo',
   },
   {
     question: 'What is the largest ocean in the world?',
-    choices: ['Pacific Ocean', 'Atlantic Ocean', 'Indian Ocean', 'Arctic Ocean'],
-    answer: 'Pacific Ocean'
+    choices: [
+      'Pacific Ocean',
+      'Atlantic Ocean',
+      'Indian Ocean',
+      'Arctic Ocean',
+    ],
+    answer: 'Pacific Ocean',
   },
   {
     question: 'Who wrote the novel "Pride and Prejudice"?',
-    choices: ['Jane Austen', 'Emily Bronte', 'Charlotte Bronte', 'Virginia Woolf'],
-    answer: 'Jane Austen'
+    choices: [
+      'Jane Austen',
+      'Emily Bronte',
+      'Charlotte Bronte',
+      'Virginia Woolf',
+    ],
+    answer: 'Jane Austen',
   },
   {
     question: 'What is the chemical symbol for gold?',
     choices: ['Au', 'Ag', 'Fe', 'Cu'],
-    answer: 'Au'
+    answer: 'Au',
   },
   {
     question: 'Which country is known as the "Land of the Rising Sun"?',
     choices: ['Japan', 'China', 'Korea', 'Thailand'],
-    answer: 'Japan'
+    answer: 'Japan',
   },
   {
     question: 'Who is the author of "To Kill a Mockingbird"?',
-    choices: ['Harper Lee', 'F. Scott Fitzgerald', 'Mark Twain', 'Ernest Hemingway'],
-    answer: 'Harper Lee'
+    choices: [
+      'Harper Lee',
+      'F. Scott Fitzgerald',
+      'Mark Twain',
+      'Ernest Hemingway',
+    ],
+    answer: 'Harper Lee',
   },
   {
     question: 'What is the largest organ in the human body?',
     choices: ['Skin', 'Heart', 'Liver', 'Brain'],
-    answer: 'Skin'
+    answer: 'Skin',
   },
   {
     question: 'Which planet is known as the "Red Planet"?',
     choices: ['Mars', 'Venus', 'Mercury', 'Neptune'],
-    answer: 'Mars'
+    answer: 'Mars',
   },
   {
     question: 'Who is the artist of the famous painting "The Starry Night"?',
-    choices: ['Vincent van Gogh', 'Pablo Picasso', 'Leonardo da Vinci', 'Claude Monet'],
-    answer: 'Vincent van Gogh'
-  }
+    choices: [
+      'Vincent van Gogh',
+      'Pablo Picasso',
+      'Leonardo da Vinci',
+      'Claude Monet',
+    ],
+    answer: 'Vincent van Gogh',
+  },
 ];
