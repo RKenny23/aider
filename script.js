@@ -86,6 +86,15 @@ function endGame() {
   restartButton.style.display = 'block';
 }
 
+function restartGame() {
+  questionContainer.style.display = 'none';
+  gameOverElement.style.display = 'none';
+  totalScoreElement.style.display = 'none';
+  restartButton.style.display = 'none';
+  scoreContainer.style.display = 'none';
+  startButton.style.display = 'block';
+}
+
 const questions = [
   {
     question: 'What is the capital of France?',
