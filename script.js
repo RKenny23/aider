@@ -13,7 +13,7 @@ let score = 0;
 let highScore = 0;
 
 startButton.addEventListener('click', startGame);
-restartButton.addEventListener('click', startGame);
+restartButton.addEventListener('click', restartGame);
 
 function startGame() {
   startButton.style.display = 'none';
@@ -95,6 +95,7 @@ function restartGame() {
   restartButton.style.display = 'none';
   scoreContainer.style.display = 'none';
   startButton.style.display = 'block';
+  highScore = 0;
 }
 
 const questions = [
